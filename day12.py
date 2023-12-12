@@ -62,7 +62,6 @@ if __name__ == "__main__":
     for line in data:
         sol1 += get_combos(line[0], tuple(line[1]), used)
         sol2 += get_combos(line[0]+"?"+line[0]+"?"+line[0]+"?"+line[0]+"?"+line[0], tuple(line[1])+tuple(line[1])+tuple(line[1])+tuple(line[1])+tuple(line[1]), used)
-        print(used[tuple([line[0], tuple(line[1])])])
 
     print('Solution 1:', sol1)
     print('Solution 2:', sol2)
