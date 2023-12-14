@@ -76,12 +76,7 @@ def get_weight(data):
 def convert_number(data):
     ret = []
     for row in data:
-        val = 0
-        for j in range(len(row)):
-            if row[j] == 1:
-                val += 2^j
-
-        ret.append(val)
+        ret.append(np.sum(np.power(2.0, row)))
     return tuple(ret)
 
 past_cycles = {}
